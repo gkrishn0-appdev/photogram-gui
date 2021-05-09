@@ -12,5 +12,18 @@ class UsersController < ApplicationController
 
     render({:template => "user_templates/show.html.erb"})
   end
+
+  def create
+    input_image = params.fetch("query_image")
+
+
+    a_new_user = User.new
+    a_new_user.username = input_image
+
+    a_new_user.save
+    redirect_to("/users/" + a_new_user.username)
+
+    #render({:template => "photo_templates/create.html.erb"})
+  end
   
 end
