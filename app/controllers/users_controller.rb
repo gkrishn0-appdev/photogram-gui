@@ -10,7 +10,6 @@ class UsersController < ApplicationController
     matching_usernames = User.where({:username => url_username})
     @the_user = matching_usernames.at(0)
 
-
     render({:template => "user_templates/show.html.erb"})
   end
   
