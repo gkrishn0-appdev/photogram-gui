@@ -68,3 +68,22 @@
   </tr>
   <% end %>
   </table>
+
+  <hr>
+
+
+<form action="/insert_comment">
+<label for="image_box">Photo ID</label>
+<input id = "image_box" name="query_image" value="<%= @the_photo.id %>">
+
+<label for="caption_box">Author ID</label>
+<textarea id="caption_box" name="query_caption"></textarea>
+
+<label for="owner_id_box">Comment</label>
+<input id = "owner_id_box" name = "query_owner_id">
+
+<button> Add comment </button>
+</form>
+
+
+<hr>
